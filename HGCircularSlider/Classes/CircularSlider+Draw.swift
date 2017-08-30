@@ -130,7 +130,7 @@ extension CircularSlider {
         context.beginPath()
         let circle = Circle(origin: bounds.center, radius: self.radius)
         let thumbOrigin = CircularSliderHelper.endPoint(fromCircle: circle, angle: angle)
-        let imageSize = image.size
+        let imageSize = CGSize(width: lineWidth+5, height: lineWidth+5)
         let imageFrame = CGRect(x: thumbOrigin.x - (imageSize.width / 2), y: thumbOrigin.y - (imageSize.height / 2), width: imageSize.width, height: imageSize.height)
         image.draw(in: imageFrame)
         UIGraphicsPopContext()
